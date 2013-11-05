@@ -1,0 +1,55 @@
+
+<html>
+	<head>
+		<title>Poor Man's Editor</title>
+	</head>
+	<body>
+
+	<h1>Poor Man's Editor</h1>
+
+	<div>$content$</div>
+
+	<hr></hr>
+
+    <script type="text/javascript" src="js/html2canvas.js"></script>
+    <script type="text/javascript" src="js/canvas2image.js"></script>
+    <script type="text/javascript" src="js/base64.js"></script>
+    <script type="text/javascript" src="js/FileSaver.js"></script>
+    <script type="text/javascript" src="js/Blob.js"></script>
+    <script type="text/javascript">
+        html2canvas(document.body, {
+            onrendered: function(canvas) {
+            	canvas.setAttribute("id", "canvasID");
+                document.body.appendChild(canvas);
+
+                var img    = canvas.toDataURL("image/png")
+            }
+        });  
+         
+		function convertCanvasToImage(canvas, callback) {
+		  var image = new Image();
+		  image.onload = function(){
+		    callback(image);
+		  }
+		  image.src = canvas.toDataURL("image/png");
+
+		
+		var canvas = document.getElementById("canvasID"), ctx = canvas.getContext("2d");
+		// draw to canvas...
+		canvas.toBlob(function(blob) {
+		    saveAs(blob, "result.png");
+		});
+
+
+		//var oCanvas = document.getElementById("canvasID");  
+  
+		//Canvas2Image.saveAsPNG(oCanvas);  // will prompt the user to save the image as PNG.  
+
+
+
+		}
+
+  
+  		</script>  
+	</body>
+</html>

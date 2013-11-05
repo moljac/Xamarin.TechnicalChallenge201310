@@ -1,0 +1,95 @@
+#
+#   "$Id: Makedefs.in 1439 2005-10-28 20:32:59Z mike $"
+#
+#   Makefile definitions for HTMLDOC, an HTML document processing program.
+#
+#   Copyright 1997-2005 by Easy Software Products.
+#
+#   These coded instructions, statements, and computer programs are the
+#   property of Easy Software Products and are protected by Federal
+#   copyright law.  Distribution and use rights are outlined in the file
+#   "COPYING.txt" which should have been included with this file.  If this
+#   file is missing or damaged please contact Easy Software Products
+#   at:
+#
+#       Attn: ESP Licensing Information
+#       Easy Software Products
+#       44141 Airport View Drive, Suite 204
+#       Hollywood, Maryland 20636-3142 USA
+#
+#       Voice: (301) 373-9600
+#       EMail: info@easysw.com
+#         WWW: http://www.easysw.com
+#
+
+#
+# Programs...
+#
+
+AR		=	/usr/bin/ar
+AWK		=	awk
+CC		=	gcc
+CXX		=	g++
+CHMOD		=	/bin/chmod
+CP		=	/bin/cp
+LN		=	/bin/ln -sf
+MKDIR		=	/bin/mkdir -p
+MV		=	/bin/mv
+POST		=	:
+RANLIB		=	ranlib
+RM		=	/bin/rm -f
+SHELL		=	/bin/sh
+
+# The extension to use for executables...
+EXEEXT		=	
+
+#
+# Directories...
+#
+
+bindir		=	/usr/bin
+datadir		=	${prefix}/share
+exec_prefix	=	/usr
+includedir	=	${prefix}/include
+infodir		=	${prefix}/info
+libdir		=	${exec_prefix}/lib
+libexecdir	=	${exec_prefix}/libexec
+localstatedir	=	${prefix}/var
+mandir		=	${prefix}/man
+oldincludedir	=	/usr/include
+prefix		=	/usr
+sbindir		=	${exec_prefix}/sbin
+sharedstatedir	=	${prefix}/com
+srcdir		=	.
+sysconfdir	=	${prefix}/etc
+top_srcdir	=	.
+
+#
+# Program options...
+#
+# OPTIM   defines the common compiler optimization/debugging options.
+#
+
+ARFLAGS		=	cr
+CFLAGS		=	-I..  -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE $(OPTIM) -I../jpeg -I../png 
+CXXFLAGS	=	-I..  -fno-rtti -fno-exceptions -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE $(OPTIM) -I../jpeg -I../png 
+LDFLAGS		=	 $(OPTIM)
+LIBS		=	-lssl -lcrypto ../png/libpng.a ../jpeg/libjpeg.a  -lz -lm 
+OPTIM		=	-Wall -Wunused -Wno-char-subscripts -Os -g -DOPENSSL_DISABLE_OLD_DES_SUPPORT -DOPENSSL_NO_KRB5
+
+#
+# Rules...
+#
+
+.SILENT:
+.SUFFIXES:	.a .c .cxx .h .o
+.c.o:
+	echo Compiling $<...
+	$(CC) $(CFLAGS) -c $<
+.cxx.o:
+	echo Compiling $<...
+	$(CXX) $(CXXFLAGS) -c $<
+
+#
+# End of "$Id: Makedefs.in 1439 2005-10-28 20:32:59Z mike $".
+#

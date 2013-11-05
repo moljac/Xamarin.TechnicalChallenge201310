@@ -65,7 +65,7 @@ namespace HttpMessageBus.EXE.Client.XamariniOS
 			if (null != this.textBoxChannel.Text) 
 			{
 				channel_current = this.textBoxChannel.Text;
-				client.Notify (channel_current, this.textBoxMessages.Text);
+				client.Notify (channel_current, this.textBoxMessage.Text);
 			}
 
 			return;

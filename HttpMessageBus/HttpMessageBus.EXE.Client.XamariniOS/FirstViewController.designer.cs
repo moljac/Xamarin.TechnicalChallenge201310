@@ -28,6 +28,9 @@ namespace HttpMessageBus.EXE.Client.XamariniOS
 		MonoTouch.UIKit.UITextField textBoxHostIPAddress { get; set; }
 
 		[Outlet]
+		MonoTouch.UIKit.UITextField textBoxMessage { get; set; }
+
+		[Outlet]
 		MonoTouch.UIKit.UITextView textBoxMessages { get; set; }
 
 		[Outlet]
@@ -35,6 +38,11 @@ namespace HttpMessageBus.EXE.Client.XamariniOS
 		
 		void ReleaseDesignerOutlets ()
 		{
+			if (buttonNotify != null) {
+				buttonNotify.Dispose ();
+				buttonNotify = null;
+			}
+
 			if (buttonSubscribe != null) {
 				buttonSubscribe.Dispose ();
 				buttonSubscribe = null;
@@ -55,6 +63,11 @@ namespace HttpMessageBus.EXE.Client.XamariniOS
 				textBoxHostIPAddress = null;
 			}
 
+			if (textBoxMessage != null) {
+				textBoxMessage.Dispose ();
+				textBoxMessage = null;
+			}
+
 			if (textBoxMessages != null) {
 				textBoxMessages.Dispose ();
 				textBoxMessages = null;
@@ -63,11 +76,6 @@ namespace HttpMessageBus.EXE.Client.XamariniOS
 			if (textBoxPort != null) {
 				textBoxPort.Dispose ();
 				textBoxPort = null;
-			}
-
-			if (buttonNotify != null) {
-				buttonNotify.Dispose ();
-				buttonNotify = null;
 			}
 		}
 	}

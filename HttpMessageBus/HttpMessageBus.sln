@@ -425,7 +425,7 @@ Global
 		{EAD8DE53-451E-41B3-8C6A-B1A5B74DE3DF}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = HttpMessageBus.EXE.Client.XamarinAndroid.VS\HttpMessageBus.EXE.Client.XamarinAndroid.VS.csproj
+		StartupItem = HttpMessageBus.EXE.Client.XamariniOS\HttpMessageBus.EXE.Client.XamariniOS.csproj
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

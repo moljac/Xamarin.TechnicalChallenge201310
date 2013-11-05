@@ -19,11 +19,16 @@ public partial class MainWindow: Gtk.Window
 				+= buttonSubscribe_Clicked;
 		buttonUnsubscribe.Clicked 
 				+= buttonUnsubscribe_Clicked;
+		buttonNotify.Clicked
+				+= buttonNotify_Clicked; 
 
-		client = new Client ();
+
+		client = new HttpMessageBus.DLL_Client.Common.Client ();
 
 		this.textBoxPort.Text = client.Port.ToString();
 		this.textBoxHostIPAddress.Text = client.HostIPAddress;
+
+		client.ResponseStringChanged += HandleResponseStringChanged;
 
 		return;
 	}
@@ -35,7 +40,26 @@ public partial class MainWindow: Gtk.Window
 		a.RetVal = true;
 	}
 
-	protected void buttonSubscribe_Clicked (object sender, EventArgs e)
+	void HandleResponseStringChanged (object sender, EventArgs e)
+	{
+		string messages = client.ResponseString + Environment.NewLine + this.textBoxMessages.Buffer.Text; 
+		this.textBoxMessages.Buffer.Text =  messages;
+
+		return;
+	}
+
+	protected void buttonNotify_Clicked (object sender, EventArgs e)
+	{
+		if (null != comboboxChannel.ActiveText) 
+		{
+			channel_current = comboboxChannel.ActiveText;
+			client.Notify (channel_current, textBoxMessage.Text);
+		}
+
+		return;
+	}
+
+		protected void buttonSubscribe_Clicked (object sender, EventArgs e)
 	{
 		if (null != comboboxChannel.ActiveText) 
 		{

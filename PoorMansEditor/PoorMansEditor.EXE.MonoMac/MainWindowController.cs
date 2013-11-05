@@ -70,7 +70,7 @@ namespace PoorMansEditor.EXE
 		{
 
 			// Load the HTML document
-			string html_path = Path.Combine (NSBundle.MainBundle.ResourcePath, "result.template.html");
+			string html_path = Path.Combine (NSBundle.MainBundle.ResourcePath, "result-png.template.html");
 			//webViewMarkUp.MainFrame.LoadRequest(new NSUrlRequest (new NSUrl (htmlPath)));
 		
 
@@ -84,11 +84,15 @@ namespace PoorMansEditor.EXE
 			html_content = html_content.Replace (placeholder, html_converted);
 
 
+			// load WebView control
+			// javascript not triggered?!?!? png does not appear at the bottom?!?!
 			webViewMarkUp.MainFrame.LoadHtmlString (html_content, null);
 
-			string html_result_path = Path.Combine (NSBundle.MainBundle.ResourcePath, "result.html");
+			string html_result_path = Path.Combine (NSBundle.MainBundle.ResourcePath, "result-png.html");
 			System.IO.File.WriteAllText(html_result_path, html_content);
 
+
+			// open in browser to see png at the bottom
 			System.Diagnostics.Process.Start (html_result_path);
 
 			return;
@@ -96,6 +100,42 @@ namespace PoorMansEditor.EXE
 
 		private void buttonPDF_HandleActivated (object sender, EventArgs e)
 		{
+			// Load the HTML document
+			string html_path = Path.Combine (NSBundle.MainBundle.ResourcePath, "result.template.html");
+			//webViewMarkUp.MainFrame.LoadRequest(new NSUrlRequest (new NSUrl (htmlPath)));
+
+
+			global::PoorMansEditor.Common.TextParser parser = null;
+			parser = new global::PoorMansEditor.Common.TextParser();
+
+			string html_converted = parser.PoorManEditorText2Html(text);
+
+			string placeholder = "<div>$content$</div>";
+			string html_content = System.IO.File.ReadAllText(html_path);
+			html_content = html_content.Replace (placeholder, html_converted);
+
+			string html_result_path = Path.Combine (NSBundle.MainBundle.ResourcePath, "result.html");
+			System.IO.File.WriteAllText(html_result_path, html_content);
+
+			// open in browser to see png at the bottom
+			System.Diagnostics.Process.Start (html_result_path);
+
+			string htmldoc_path = Path.Combine (NSBundle.MainBundle.ResourcePath, "htmldoc");
+			// open in browser to see png at the bottom
+			string result_pdf_path = Path.Combine (NSBundle.MainBundle.ResourcePath, "result.pdf");
+
+
+			System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo ();
+			psi.FileName = htmldoc_path;
+			psi.Arguments =
+				" -f " 
+				+  result_pdf_path +
+				" " 
+				+ Path.Combine (NSBundle.MainBundle.ResourcePath, "result.html")
+				;
+			System.Diagnostics.Process.Start (psi);
+
+			System.Diagnostics.Process.Start (result_pdf_path);
 
 			return;
 		}
