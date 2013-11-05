@@ -391,25 +391,40 @@ namespace HttpMessageBus.Server
 		/// <param name="context"></param>
 		private void NotifyChannel(string user_client, string channel, string message, HttpListenerContext context)
 		{
-			MessageBusChannel message_bus =
-				(
-					from mb in MessageBus.MessageBusChannels
-					where mb.Channel == channel
-					select mb
-				).FirstOrDefault();
-				;
+			MessageBusChannel message_bus_channel =
+					(
+						from mb in MessageBus.MessageBusChannels
+							where mb.Channel == channel
+							select mb
+					).FirstOrDefault();
+			;
 
-				if (null == message_bus)
+			if (null == message_bus_channel)
+			{
+				MessageBusChannel channel_new = new MessageBusChannel()
 				{
-					MessageBusChannel channel_new = new MessageBusChannel()
-					{
-						Channel = channel
-					};
-					channel_new.UserContexts.Add(context);
-					channel_new.UsersClients.Add(user_client);
+					Channel = channel
+				};
+				channel_new.UserContexts.Add(context);
+				channel_new.UsersClients.Add(user_client);
 
-					this.MessageBus.MessageBusChannels.Add(channel_new);
+				this.MessageBus.MessageBusChannels.Add(channel_new);
+			}
+			else
+			{
+				if (message_bus_channel.UsersClients.Exists(uc => uc == user_client) == false)
+				{
+					message_bus_channel.UsersClients.Add(user_client);
+					message_bus_channel.UserContexts.Add(context);
 				}
+				string[] message_response = SendResponseMessage();
+
+				foreach (HttpListenerContext ctx in message_bus_channel.UserContexts)
+				{
+					Console.WriteLine("BROADCAST to" + ctx.Request.RemoteEndPoint.ToString());
+					ProcessResponseChunked(ctx, message_response);
+				}
+			}
 
 
 			return;
