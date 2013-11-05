@@ -1,0 +1,76 @@
+
+<html>
+	<head>
+		<title>Ikee teaches Mokee</title>
+	</head>
+	<body>
+
+	<div id="content">
+	     <h3>Hello, this is a H3 tag</h3>
+
+	    <p>a pararaph</p>
+	</div>
+	<div id="editor"></div>
+	<button id="cmd">generate PDF</button>
+
+   	<div id="poormanseditormarkup"> 
+		Ikee teaches Mokee
+	</div>
+	<div>
+	    <input id="message_button" type="button" value="PDF" />
+	    <input id="message_button" type="button" value="PNG"/>
+	</div>
+
+
+	<script type="text/javascript" src="js/jspdf.js"></script>
+
+
+
+			<canvas id="pdf-canvas" style="border:1px solid black;"/> 
+
+
+		<script type="text/javascript" src="js/pdf.js"></script>    
+		<script type="text/javascript" src="js/metrics.js"></script>  
+		<script type="text/javascript" src="js/fonts.js"></script>  
+		<script type="text/javascript" src="js/glyphlist.js"></script> 
+
+		<script type="text/javascript">  
+
+var doc = new jsPDF();
+var specialElementHandlers = {
+    '#editor': function (element, renderer) {
+        return true;
+    }
+};
+
+$('#cmd').click(function () {
+    doc.fromHTML($('#content').html(), 15, 15, {
+        'width': 170,
+            'elementHandlers': specialElementHandlers
+    });
+    doc.save('sample-file.pdf');
+});
+
+
+
+/*
+		'use strict';        
+		getPdf('myPDFFile.pdf', function getPdf(data) {  
+		 // Instantiate PDFDoc with PDF data            
+		 var pdf = new PDFDoc(data);            
+		 var page = pdf.getPage(1);            
+		 var scale = 1.5;  
+		  
+		 // Prepare canvas using PDF page dimensions            
+		 var canvas = document.getElementById('pdf-canvas');  
+		 var context = canvas.getContext('2d');  
+		 canvas.height = page.height * scale;  
+		 canvas.width = page.width * scale;            
+		   
+		 // Render PDF page into canvas context  
+		 page.startRendering(context);        
+		});    
+*/
+		</script>  
+	</body>
+</html>

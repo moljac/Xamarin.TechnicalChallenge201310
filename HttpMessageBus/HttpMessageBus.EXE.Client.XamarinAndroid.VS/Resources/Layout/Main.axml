@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:minWidth="25px"
+    android:minHeight="25px"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:stretchColumns="*"
+    android:id="@+id/tableLayout1">
+    <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="fill_parent">
+        <TextView
+            android:text="Host / IP Address:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_column="0"
+            android:id="@+id/labelHostIPAddress"
+            android:layout_width="fill_parent" />
+        <EditText
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_column="1"
+            android:id="@+id/textBoxHostIPAddress"
+            android:layout_width="fill_parent" />
+    </TableRow>
+    <TableRow
+        android:id="@+id/tableRow2">
+        <TextView
+            android:text="Port:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_column="0"
+            android:id="@+id/labelPort"
+            android:layout_width="fill_parent" />
+        <EditText
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_column="1"
+            android:id="@+id/textBoxPort"
+            android:layout_width="fill_parent" />
+    </TableRow>
+<!--
+	<TableRow
+		android:id="@+id/tableRow3">
+		<Button
+			android:text="Start"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_column="0"
+			android:id="@+id/buttonStart"
+			android:layout_width="fill_parent" />
+		<Button
+			android:text="Stop"
+			android:textAppearance="?android:attr/textAppearanceMedium"
+			android:layout_column="1"
+			android:id="@+id/buttonStop"
+			android:layout_width="fill_parent" />
+	</TableRow>
+	-->
+    <TableRow
+        android:id="@+id/tableRow4">
+        <TextView
+            android:text="Channel:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_column="0"
+            android:id="@+id/labelChannel"
+            android:layout_width="fill_parent" />
+        <EditText
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_column="1"
+            android:id="@+id/textBoxChannel"
+            android:layout_width="fill_parent" />
+    </TableRow>
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="fill_parent">
+        <Button
+            android:text="Subscribe"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_column="0"
+            android:id="@+id/buttonSubscribe"
+            android:layout_width="fill_parent" />
+        <Button
+            android:text="Unsubscribe"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_column="1"
+            android:id="@+id/buttonUnsubscribe"
+            android:layout_width="fill_parent" />
+    </TableRow>
+    <TableRow
+        android:id="@+id/tableRow6">
+        <TextView
+            android:text="Message:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_column="0"
+            android:id="@+id/labelMessage"
+            android:layout_width="fill_parent" />
+        <EditText
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_column="1"
+            android:id="@+id/textBoxMessage"
+            android:layout_width="fill_parent" />
+    </TableRow>
+    <TableRow
+        android:id="@+id/tableRow7">
+        <Button
+            android:text="Notify"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_column="0"
+            android:layout_span="2"
+            android:id="@+id/buttonNotify"
+            android:layout_width="fill_parent" />
+    </TableRow>
+    <TableRow
+        android:id="@+id/tableRow9">
+        <TextView
+            android:text="Messages:"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_column="0"
+            android:layout_span="2"
+            android:id="@+id/labelMessage"
+            android:layout_width="fill_parent" />
+    </TableRow>
+    <TableRow
+        android:id="@+id/tableRow8">
+        <EditText
+            android:inputType="textMultiLine"
+            android:layout_column="0"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/textBoxMessages"
+            android:layout_span="2"
+            android:singleLine="false"
+            android:lines="10"
+            android:minLines="10" />
+    </TableRow>
+</TableLayout>

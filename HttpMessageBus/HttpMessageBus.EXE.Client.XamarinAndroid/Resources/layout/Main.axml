@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:minWidth="25px"
+    p1:minHeight="25px"
+    p1:layout_width="fill_parent"
+    p1:layout_height="fill_parent"
+    p1:stretchColumns="*"
+    p1:id="@+id/tableLayout1">
+    <TableRow
+        p1:id="@+id/tableRow1"
+        p1:layout_width="fill_parent">
+        <TextView
+            p1:text="Host / IP Address:"
+            p1:textAppearance="?android:attr/textAppearanceMedium"
+            p1:layout_column="0"
+            p1:id="@+id/labelHostIPAddress"
+            p1:layout_width="fill_parent" />
+        <EditText
+            p1:inputType="number"
+            p1:layout_column="1"
+            p1:id="@+id/textBoxHostIPAddress"
+            p1:layout_width="fill_parent" />
+    </TableRow>
+    <TableRow
+        p1:id="@+id/tableRow2">
+        <TextView
+            p1:text="Port:"
+            p1:textAppearance="?android:attr/textAppearanceMedium"
+            p1:layout_column="0"
+            p1:id="@+id/labelPort"
+            p1:layout_width="fill_parent" />
+        <EditText
+            p1:inputType="number"
+            p1:layout_column="1"
+            p1:id="@+id/textBoxPort"
+            p1:layout_width="fill_parent" />
+    </TableRow>
+    <TableRow
+        p1:id="@+id/tableRow3">
+        <Button
+            p1:text="Start"
+            p1:textAppearance="?android:attr/textAppearanceMedium"
+            p1:layout_column="0"
+            p1:id="@+id/buttonStart"
+            p1:layout_width="fill_parent" />
+        <Button
+            p1:text="Stop"
+            p1:textAppearance="?android:attr/textAppearanceMedium"
+            p1:layout_column="1"
+            p1:id="@+id/buttonStop"
+            p1:layout_width="fill_parent" />
+    </TableRow>
+    <TableRow
+        p1:id="@+id/tableRow4">
+        <TextView
+            p1:text="Channel:"
+            p1:textAppearance="?android:attr/textAppearanceMedium"
+            p1:layout_column="0"
+            p1:id="@+id/labelChannel"
+            p1:layout_width="fill_parent" />
+        <EditText
+            p1:inputType="number"
+            p1:layout_column="1"
+            p1:id="@+id/textBoxChannel"
+            p1:layout_width="fill_parent" />
+    </TableRow>
+    <TableRow
+        p1:id="@+id/tableRow5"
+        p1:layout_width="fill_parent">
+        <Button
+            p1:text="Subscribe"
+            p1:textAppearance="?android:attr/textAppearanceMedium"
+            p1:layout_column="0"
+            p1:id="@+id/buttonStart"
+            p1:layout_width="fill_parent" />
+        <Button
+            p1:text="Unsubscribe"
+            p1:textAppearance="?android:attr/textAppearanceMedium"
+            p1:layout_column="1"
+            p1:id="@+id/buttonStop"
+            p1:layout_width="fill_parent" />
+    </TableRow>
+    <TableRow
+        p1:id="@+id/tableRow6">
+        <TextView
+            p1:text="Message:"
+            p1:textAppearance="?android:attr/textAppearanceMedium"
+            p1:layout_column="0"
+            p1:id="@+id/labelMessage"
+            p1:layout_width="fill_parent" />
+    </TableRow>
+    <TableRow
+        p1:id="@+id/tableRow7">
+        <TextView
+            p1:text="Messages:"
+            p1:textAppearance="?android:attr/textAppearanceMedium"
+            p1:layout_column="0"
+            p1:id="@+id/labelMessage"
+            p1:layout_width="fill_parent" />
+    </TableRow>
+    <TableRow
+        p1:id="@+id/tableRow8">
+        <EditText
+            p1:inputType="number"
+            p1:layout_column="1"
+            p1:id="@+id/textBoxMessage"
+            p1:layout_width="fill_parent" />
+    </TableRow>
+</TableLayout>

@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EAD8DE53-451E-41B3-8C6A-B1A5B74DE3DF}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HttpMessageBus.EXE.Server.Console</RootNamespace>
+    <AssemblyName>HttpMessageBus.EXE.Server.Console</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HttpMessageBus.DLL.Server.Common\HttpMessageBus.DLL.Server.Common.csproj">
+      <Project>{474274E0-A169-41AC-A47F-CC5749EB43BD}</Project>
+      <Name>HttpMessageBus.DLL.Server.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="samples\HTML Reference_files\jsapi" />
+    <None Include="samples\HTML5 Reference_files\W3C-ED" />
+    <None Include="samples\HTML5 Reference_files\w3c_home" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="samples\Advanced Bash-Scripting Guide.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="samples\Advanced Bash-Scripting Guide_files\caution.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="samples\Advanced Bash-Scripting Guide_files\important.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="samples\Advanced Bash-Scripting Guide_files\note.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="samples\Advanced Bash-Scripting Guide_files\tip.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="samples\Advanced Bash-Scripting Guide_files\warning.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="samples\HTML5 Reference_files\content-venn.png" />
+    <None Include="samples\HTML5 Reference.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="samples\HTML Reference_files\w3schoolscom_gray.gif" />
+    <None Include="samples\HTML Reference_files\w3logotest2.png" />
+    <None Include="samples\HTML Reference_files\translateelement.css" />
+    <None Include="samples\HTML Reference_files\translate-32.png" />
+    <None Include="samples\HTML Reference_files\stdtheme.css" />
+    <None Include="samples\HTML Reference_files\small-logo.png" />
+    <None Include="samples\HTML Reference_files\share_twitter.gif" />
+    <None Include="samples\HTML Reference_files\share_stumbleupon.gif" />
+    <None Include="samples\HTML Reference_files\share_reddit.gif" />
+    <None Include="samples\HTML Reference_files\share_facebook.gif" />
+    <None Include="samples\HTML Reference_files\share_email.gif" />
+    <None Include="samples\HTML Reference_files\share_digg.gif" />
+    <None Include="samples\HTML Reference_files\share_delicious.gif" />
+    <None Include="samples\HTML Reference_files\search_box_icon.png" />
+    <None Include="samples\HTML Reference_files\main.js" />
+    <None Include="samples\HTML Reference_files\like.html" />
+    <None Include="samples\HTML Reference_files\gpt.js" />
+    <None Include="samples\HTML Reference_files\ga.js" />
+    <None Include="samples\HTML Reference_files\element_main.js" />
+    <None Include="samples\HTML Reference_files\element.js" />
+    <None Include="samples\HTML Reference_files\default+en.I.js" />
+    <None Include="samples\HTML Reference_files\default+en.css" />
+    <None Include="samples\HTML Reference_files\default.css" />
+    <None Include="samples\HTML Reference_files\cse.js" />
+    <None Include="samples\HTML Reference_files\colormap_80.gif" />
+    <None Include="samples\HTML Reference_files\cleardot.gif" />
+    <None Include="samples\HTML Reference.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="samples\HTML-Ipsum.htm">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="samples\HTML-Ipsum_files\ga.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="samples\HTML-Ipsum_files\ipsum.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="samples\HTML-Ipsum_files\jquery.min.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="samples\HTML-Ipsum_files\ZeroClipboard.js">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

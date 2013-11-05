@@ -1,0 +1,49 @@
+
+<html>
+	<head>
+		<title>Ikee teaches Mokee</title>
+	</head>
+	<body>
+
+	<div id="content">
+	     <h3>Hello, this is a H3 tag</h3>
+
+	    <p>a pararaph</p>
+	</div>
+	<div id="editor"></div>
+	<button id="cmd">generate PDF</button>
+
+   	<div id="poormanseditormarkup"> 
+		Ikee teaches Mokee
+	</div>
+	<div>
+	    <input id="message_button" type="button" value="PDF" />
+	    <input id="message_button" type="button" value="PNG"/>
+	</div>
+
+
+	<hr></hr>
+
+    <script type="text/javascript" src="js/html2canvas.js"></script>
+    <script type="text/javascript">
+        html2canvas(document.body, {
+            onrendered: function(canvas) {
+            	canvas.setAttribute("id", "canvasID");
+                document.body.appendChild(canvas);
+
+                var img    = canvas.toDataURL("image/png")
+            }
+        });  
+         
+		function convertCanvasToImage(canvas, callback) {
+		  var image = new Image();
+		  image.onload = function(){
+		    callback(image);
+		  }
+		  image.src = canvas.toDataURL("image/png");
+
+		}
+
+		</script>  
+	</body>
+</html>

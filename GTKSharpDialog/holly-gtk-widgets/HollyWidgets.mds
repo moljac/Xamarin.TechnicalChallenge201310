@@ -1,0 +1,25 @@
+<Combine fileversion="2.0" name="HollyWidgets">
+  <Configurations active="Debug">
+    <Configuration name="Debug" ctype="CombineConfiguration">
+      <Entry build="True" name="test2" configuration="Debug" />
+      <Entry build="True" name="HollyLibrary.Old" configuration="Debug" />
+      <Entry build="True" name="test-new" configuration="Debug" />
+    </Configuration>
+    <Configuration name="Release" ctype="CombineConfiguration">
+      <Entry build="True" name="test2" configuration="Release" />
+      <Entry build="True" name="HollyLibrary.Old" configuration="Release" />
+      <Entry build="True" name="test-new" configuration="Release" />
+    </Configuration>
+  </Configurations>
+  <StartMode startupentry="test-new" single="True">
+    <Execute type="None" entry="test2" />
+    <Execute type="None" entry="HollyLibrary.Old" />
+    <Execute type="None" entry="test-new" />
+  </StartMode>
+  <MonoDevelop.ChangeLogAddIn.ChangeLogInfo policy="UpdateNearestChangeLog" />
+  <Entries>
+    <Entry filename="test2\test2.mdp" />
+    <Entry filename="HollyLibrary.Old\HollyLibrary.Old.mdp" />
+    <Entry filename="test-new\test-new.mdp" />
+  </Entries>
+</Combine>

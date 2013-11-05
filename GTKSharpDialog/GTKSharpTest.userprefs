@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|Mixed Platforms" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="GTKSharpTest.DLL.Widgets\DialogColorPickerOfficeLike.cs">
+    <Files>
+      <File FileName="GTKSharpTest.DLL.Widgets\DialogColorPickerOfficeLike.cs" Line="2" Column="1" />
+      <File FileName="GTKSharpTest.DLL.Widgets\FontDialogOfficeWidget.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="D:\Xamarin.TechnicalChallenge201310\GTKSharpDialog\GTKSharpTest.DLL.Widgets\FontDialogOfficeWidget.cs" line="470" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
