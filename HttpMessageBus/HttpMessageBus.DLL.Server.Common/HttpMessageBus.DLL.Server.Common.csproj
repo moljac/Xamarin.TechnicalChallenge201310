@@ -43,6 +43,7 @@
     <Compile Include="..\HttpMessageBus.DLL.Client.Common\HttpMessageBusSettings.cs">
       <Link>HttpMessageBusSettings.cs</Link>
     </Compile>
+    <Compile Include="Server.TcpClient.cs" />
     <Compile Include="MessageBus.cs" />
     <Compile Include="MessageBusChannel.cs" />
     <Compile Include="Server.cs" />

@@ -114,7 +114,11 @@ namespace HttpMessageBus.DLL_Client.Common
 			http_web_request.TransferEncoding="gzip";
 			Console.WriteLine("\nPlease Enter the data to be posted to the uri:" + url);
 			string inputData = message;
-			string postData=""+inputData;
+			string postData= 
+					"message=" + inputData 
+					+ Environment.NewLine + 
+					"port=" + HttpMessageBusSettings.PortClientListener
+				 	;
 			// 'Method' property of 'HttpWebRequest' class is set to POST.
 			http_web_request.Method="POST";
 			ASCIIEncoding encodedData=new ASCIIEncoding();
@@ -234,6 +238,7 @@ namespace HttpMessageBus.DLL_Client.Common
 			;
 		# endregion Property string ResponseString w Event post (ResponseStringChanged)
 		//-------------------------------------------------------------------------	
+
 	}
 }
 

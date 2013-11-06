@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -581,6 +581,24 @@ namespace HttpMessageBus.Server
 			return;
 		}
 
+		private void SendMesageToClient(string ip_address, int port, string message)
+		{
+			System.Net.Sockets.TcpClient client = new System.Net.Sockets.TcpClient();
+
+			IPEndPoint serverEndPoint = new IPEndPoint(IPAddress.Parse(ip_address), port);
+
+			client.Connect(serverEndPoint);
+
+			System.Net.Sockets.NetworkStream clientStream = client.GetStream();
+
+			ASCIIEncoding encoder = new ASCIIEncoding();
+			byte[] buffer = encoder.GetBytes(message);
+
+			clientStream.Write(buffer, 0 , buffer.Length);
+			clientStream.Flush();
+
+			return;
+		}
 
 		public void Stop()
 		{
