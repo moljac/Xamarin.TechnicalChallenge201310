@@ -8,7 +8,7 @@ namespace HttpMessageBus
 	public partial class HttpMessageBusSettings 
 	{
 		public static int		Port = 9000;
-		public static string	Host = "192.168.11.102";
+		public static string	Host = "192.168.1.70";
 
 		public static string[] Verbs = new string[]
 		{
