@@ -28,64 +28,165 @@
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.buttonClientConnect = new System.Windows.Forms.Button();
-			this.textBoxHttpMessageBusServer = new System.Windows.Forms.TextBox();
-			this.labelHttpMessageBusServer = new System.Windows.Forms.Label();
-			this.textBox2 = new System.Windows.Forms.TextBox();
-			this.label1Message = new System.Windows.Forms.Label();
+			this.buttonUnsubscribe = new System.Windows.Forms.Button();
+			this.textBoxHostIPAddress = new System.Windows.Forms.TextBox();
+			this.labelHostIPAddress = new System.Windows.Forms.Label();
+			this.textBoxPort = new System.Windows.Forms.TextBox();
+			this.labelPort = new System.Windows.Forms.Label();
+			this.textBoxChannel = new System.Windows.Forms.TextBox();
+			this.labelChannel = new System.Windows.Forms.Label();
+			this.buttonSubscribe = new System.Windows.Forms.Button();
+			this.labelMessage = new System.Windows.Forms.Label();
+			this.textBoxMessage = new System.Windows.Forms.TextBox();
+			this.labelMessages = new System.Windows.Forms.Label();
+			this.textBoxMessages = new System.Windows.Forms.TextBox();
+			this.buttonNotify = new System.Windows.Forms.Button();
 			this.SuspendLayout();
 			// 
-			// buttonClientConnect
+			// buttonUnsubscribe
 			// 
-			this.buttonClientConnect.Location = new System.Drawing.Point(12, 63);
-			this.buttonClientConnect.Name = "buttonClientConnect";
-			this.buttonClientConnect.Size = new System.Drawing.Size(75, 23);
-			this.buttonClientConnect.TabIndex = 13;
-			this.buttonClientConnect.Text = "Connect";
-			this.buttonClientConnect.UseVisualStyleBackColor = true;
+			this.buttonUnsubscribe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.buttonUnsubscribe.Location = new System.Drawing.Point(253, 86);
+			this.buttonUnsubscribe.Name = "buttonUnsubscribe";
+			this.buttonUnsubscribe.Size = new System.Drawing.Size(75, 23);
+			this.buttonUnsubscribe.TabIndex = 13;
+			this.buttonUnsubscribe.Text = "Unsubscribe";
+			this.buttonUnsubscribe.UseVisualStyleBackColor = true;
 			// 
-			// textBoxHttpMessageBusServer
+			// textBoxHostIPAddress
 			// 
-			this.textBoxHttpMessageBusServer.Location = new System.Drawing.Point(163, 6);
-			this.textBoxHttpMessageBusServer.Name = "textBoxHttpMessageBusServer";
-			this.textBoxHttpMessageBusServer.Size = new System.Drawing.Size(585, 20);
-			this.textBoxHttpMessageBusServer.TabIndex = 12;
+			this.textBoxHostIPAddress.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBoxHostIPAddress.Location = new System.Drawing.Point(110, 2);
+			this.textBoxHostIPAddress.Name = "textBoxHostIPAddress";
+			this.textBoxHostIPAddress.Size = new System.Drawing.Size(218, 20);
+			this.textBoxHostIPAddress.TabIndex = 12;
 			// 
-			// labelHttpMessageBusServer
+			// labelHostIPAddress
 			// 
-			this.labelHttpMessageBusServer.AutoSize = true;
-			this.labelHttpMessageBusServer.Location = new System.Drawing.Point(12, 9);
-			this.labelHttpMessageBusServer.Name = "labelHttpMessageBusServer";
-			this.labelHttpMessageBusServer.Size = new System.Drawing.Size(131, 13);
-			this.labelHttpMessageBusServer.TabIndex = 11;
-			this.labelHttpMessageBusServer.Text = "Http Message Bus Server:";
+			this.labelHostIPAddress.AutoSize = true;
+			this.labelHostIPAddress.Location = new System.Drawing.Point(12, 9);
+			this.labelHostIPAddress.Name = "labelHostIPAddress";
+			this.labelHostIPAddress.Size = new System.Drawing.Size(80, 13);
+			this.labelHostIPAddress.TabIndex = 11;
+			this.labelHostIPAddress.Text = "HostIPAddress:";
 			// 
-			// textBox2
+			// textBoxPort
 			// 
-			this.textBox2.Location = new System.Drawing.Point(163, 31);
-			this.textBox2.Name = "textBox2";
-			this.textBox2.Size = new System.Drawing.Size(585, 20);
-			this.textBox2.TabIndex = 15;
+			this.textBoxPort.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBoxPort.Location = new System.Drawing.Point(110, 27);
+			this.textBoxPort.Name = "textBoxPort";
+			this.textBoxPort.Size = new System.Drawing.Size(218, 20);
+			this.textBoxPort.TabIndex = 15;
 			// 
-			// label1Message
+			// labelPort
 			// 
-			this.label1Message.AutoSize = true;
-			this.label1Message.Location = new System.Drawing.Point(12, 34);
-			this.label1Message.Name = "label1Message";
-			this.label1Message.Size = new System.Drawing.Size(53, 13);
-			this.label1Message.TabIndex = 14;
-			this.label1Message.Text = "Message:";
+			this.labelPort.AutoSize = true;
+			this.labelPort.Location = new System.Drawing.Point(12, 34);
+			this.labelPort.Name = "labelPort";
+			this.labelPort.Size = new System.Drawing.Size(29, 13);
+			this.labelPort.TabIndex = 14;
+			this.labelPort.Text = "Port:";
+			// 
+			// textBoxChannel
+			// 
+			this.textBoxChannel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBoxChannel.Location = new System.Drawing.Point(110, 53);
+			this.textBoxChannel.Name = "textBoxChannel";
+			this.textBoxChannel.Size = new System.Drawing.Size(218, 20);
+			this.textBoxChannel.TabIndex = 16;
+			// 
+			// labelChannel
+			// 
+			this.labelChannel.AutoSize = true;
+			this.labelChannel.Location = new System.Drawing.Point(12, 56);
+			this.labelChannel.Name = "labelChannel";
+			this.labelChannel.Size = new System.Drawing.Size(49, 13);
+			this.labelChannel.TabIndex = 17;
+			this.labelChannel.Text = "Channel:";
+			// 
+			// buttonSubscribe
+			// 
+			this.buttonSubscribe.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.buttonSubscribe.Location = new System.Drawing.Point(172, 86);
+			this.buttonSubscribe.Name = "buttonSubscribe";
+			this.buttonSubscribe.Size = new System.Drawing.Size(75, 23);
+			this.buttonSubscribe.TabIndex = 18;
+			this.buttonSubscribe.Text = "Subscribe";
+			this.buttonSubscribe.UseVisualStyleBackColor = true;
+			// 
+			// labelMessage
+			// 
+			this.labelMessage.AutoSize = true;
+			this.labelMessage.Location = new System.Drawing.Point(12, 118);
+			this.labelMessage.Name = "labelMessage";
+			this.labelMessage.Size = new System.Drawing.Size(53, 13);
+			this.labelMessage.TabIndex = 20;
+			this.labelMessage.Text = "Message:";
+			// 
+			// textBoxMessage
+			// 
+			this.textBoxMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBoxMessage.Location = new System.Drawing.Point(110, 115);
+			this.textBoxMessage.Name = "textBoxMessage";
+			this.textBoxMessage.Size = new System.Drawing.Size(218, 20);
+			this.textBoxMessage.TabIndex = 19;
+			// 
+			// labelMessages
+			// 
+			this.labelMessages.AutoSize = true;
+			this.labelMessages.Location = new System.Drawing.Point(12, 176);
+			this.labelMessages.Name = "labelMessages";
+			this.labelMessages.Size = new System.Drawing.Size(58, 13);
+			this.labelMessages.TabIndex = 22;
+			this.labelMessages.Text = "Messages:";
+			// 
+			// textBoxMessages
+			// 
+			this.textBoxMessages.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+			this.textBoxMessages.Location = new System.Drawing.Point(110, 173);
+			this.textBoxMessages.Multiline = true;
+			this.textBoxMessages.Name = "textBoxMessages";
+			this.textBoxMessages.Size = new System.Drawing.Size(218, 114);
+			this.textBoxMessages.TabIndex = 21;
+			// 
+			// buttonNotify
+			// 
+			this.buttonNotify.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+			this.buttonNotify.Location = new System.Drawing.Point(253, 141);
+			this.buttonNotify.Name = "buttonNotify";
+			this.buttonNotify.Size = new System.Drawing.Size(75, 23);
+			this.buttonNotify.TabIndex = 23;
+			this.buttonNotify.Text = "Notify";
+			this.buttonNotify.UseVisualStyleBackColor = true;
 			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-			this.ClientSize = new System.Drawing.Size(762, 99);
-			this.Controls.Add(this.textBox2);
-			this.Controls.Add(this.label1Message);
-			this.Controls.Add(this.buttonClientConnect);
-			this.Controls.Add(this.textBoxHttpMessageBusServer);
-			this.Controls.Add(this.labelHttpMessageBusServer);
+			this.ClientSize = new System.Drawing.Size(340, 299);
+			this.Controls.Add(this.buttonNotify);
+			this.Controls.Add(this.labelMessages);
+			this.Controls.Add(this.textBoxMessages);
+			this.Controls.Add(this.labelMessage);
+			this.Controls.Add(this.textBoxMessage);
+			this.Controls.Add(this.buttonSubscribe);
+			this.Controls.Add(this.labelChannel);
+			this.Controls.Add(this.textBoxChannel);
+			this.Controls.Add(this.textBoxPort);
+			this.Controls.Add(this.labelPort);
+			this.Controls.Add(this.buttonUnsubscribe);
+			this.Controls.Add(this.textBoxHostIPAddress);
+			this.Controls.Add(this.labelHostIPAddress);
 			this.Name = "Form1";
 			this.Text = "Client";
 			this.ResumeLayout(false);
@@ -95,11 +196,19 @@
 
 		#endregion
 
-		private System.Windows.Forms.Button buttonClientConnect;
-		private System.Windows.Forms.TextBox textBoxHttpMessageBusServer;
-		private System.Windows.Forms.Label labelHttpMessageBusServer;
-		private System.Windows.Forms.TextBox textBox2;
-		private System.Windows.Forms.Label label1Message;
+		private System.Windows.Forms.Button buttonUnsubscribe;
+		private System.Windows.Forms.TextBox textBoxHostIPAddress;
+		private System.Windows.Forms.Label labelHostIPAddress;
+		private System.Windows.Forms.TextBox textBoxPort;
+		private System.Windows.Forms.Label labelPort;
+		private System.Windows.Forms.TextBox textBoxChannel;
+		private System.Windows.Forms.Label labelChannel;
+		private System.Windows.Forms.Button buttonSubscribe;
+		private System.Windows.Forms.Label labelMessage;
+		private System.Windows.Forms.TextBox textBoxMessage;
+		private System.Windows.Forms.Label labelMessages;
+		private System.Windows.Forms.TextBox textBoxMessages;
+		private System.Windows.Forms.Button buttonNotify;
 
 
 	}

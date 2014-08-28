@@ -92,6 +92,12 @@
     </None>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HttpMessageBus.DLL.Client.Common\HttpMessageBus.DLL.Client.Common.csproj">
+      <Project>{7D767BC5-60D5-4F2D-8788-5F2F396E7787}</Project>
+      <Name>HttpMessageBus.DLL.Client.Common</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
